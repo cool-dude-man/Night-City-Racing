@@ -401,9 +401,9 @@ function buildLevel(idx) {
   curLevel.decor(rnd);
   // coins
   allCoins = [];
-  for (let i = 90; i < N - 40; i += 80 + Math.floor(rnd() * 70)) {
+  for (let i = 120; i < N - 40; i += 240 + Math.floor(rnd() * 180)) {
     const lane = [-0.55, 0, 0.55][Math.floor(rnd() * 3)];
-    for (let k = 0; k < 5; k++) { const s = { type: 'coin', offset: lane, w: 380, h: 380, got: false, seed: k }; segments[i + k * 5].sprites.push(s); allCoins.push(s); }
+    for (let k = 0; k < 4; k++) { const s = { type: 'coin', offset: lane, w: 380, h: 380, got: false, seed: k }; segments[i + k * 5].sprites.push(s); allCoins.push(s); }
   }
   segments[2].sprites.push({ type: 'gate', offset: 0, w: ROAD * 2.1, h: 2300 });
   bg = curLevel.bg(); skyCache = null;
